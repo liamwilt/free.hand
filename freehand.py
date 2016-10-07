@@ -7,11 +7,22 @@ import os.path
 
 class FreeHandWidget(Widget):
 
+    def __init__(self, **kwargs):
+        super(FreeHandWidget, self).__init__(**kwargs)
+        self.size = [800,600]
+        self.draw_circle()
+
+    def draw_circle(self):
+        self.canvas.add(Color(1.,1.,1.))
+        self.canvas.add(Ellipse(pos=(300,200),size=(200,200)))
+        self.canvas.add(Color(0,0,0))
+        self.canvas.add(Ellipse(pos=(301,201),size=(198,198)))
+
     def on_touch_down(self, touch):
         color = (random(), 1, 1)
         with self.canvas:
             Color(*color, mode='hsv')
-            d = 20.
+            d = 10.
             Ellipse(pos=(touch.x - d / 2, touch.y - d / 2), size=(d, d))
             touch.ud['line'] = Line(points=(touch.x, touch.y), width = 5, cap = "round", joint = "round")
 
