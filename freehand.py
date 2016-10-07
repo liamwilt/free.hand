@@ -42,7 +42,17 @@ class FreeHandApp(App):
         return parent
 
     def clear_canvas(self, obj):
+        i = 0
+        while True:
+            fname = "saved-"+str(i)+".png"
+            if (os.path.isfile(fname)):
+                print("looking...")
+                i += 1
+            else:
+                self.painter.export_to_png(fname)
+                break
         self.painter.canvas.clear()
+        self.painter.draw_circle()
 
 if __name__ == '__main__':
     FreeHandApp().run()
