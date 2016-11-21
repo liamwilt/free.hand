@@ -1,6 +1,2 @@
-# imprint
 # Description
 *ImPrint* is a game designed to assess eye hand coordination and upper-limb motor control capabilities. Users interface with a simple [paint](https://en.wikipedia.org/wiki/Microsoft_Paint) program by way of a computer mouse in place of the artist's brush. Each click produces an ellipse of color selected at random from the [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV) color space. For each trial, a unique shape is drawn to the background of the program window and users are prompted to trace this shape to the best of their ability. Once complete, the "New" button may be clicked and a new shape will be drawn. In parallel, an image capture mechanism prints and stores the entirety of the program window, per trial, at a rate of 30 images per second. These images can be compiled into a video file or analyzed individually for manual motor control, both fine and gross, accuracy, completion percentage, or number of strokes taken per image. Additionally, two programs are being developed for further exmination of the output, employing motion estimation algorithms (e.g. optical flow, block matching) and fractal dimension analysis, contrasting the dimensional value of the user-drawn image to that of the ideal dimensional value drawn by the program.
-# Usage
-# Download
-# License
